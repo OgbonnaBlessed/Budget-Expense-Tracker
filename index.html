@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="outer-container">
+        <h1>Budget Expenses Tracker</h1>
+
+        <div class="inner-container">
+            <div class="input-container">
+                <div class="budget">
+                    <h2>Total Budget</h2>
+                    <input type="number" id="total-budget" placeholder="Total Budget" required>
+                </div>
+                <div class="expense-name">
+                    <h2>Expense Name</h2>
+                    <input type="text" id="expense-name" placeholder="Expense Name" required>
+                </div>
+                <div class="expense-amount">
+                    <h2>Expense Amount</h2>
+                    <input type="number" id="expense-amount" placeholder="Expense Amount" required>
+                </div>
+                <button id="add-expense">Add Expense</button>
+            </div>
+            
+            <div class="right-container">
+                <div class="display">
+                    <div class="head">
+                        <div class="name">Product Name</div>
+                        <div class="amount">Amount</div>
+                        <div class="actions">Actions</div>
+                    </div>
+                    <div class="expense-list" id="expense-list"></div>
+                </div>
+                
+                <div class="Calculations">
+                    <div class="total-money" id="box1">
+                        <h3>Total Money</h3>
+                        <p id="box1-p">0</p>
+                    </div>
+                    <div class="expenses" id="box2">
+                        <h3>Expenses</h3>
+                        <p id="box2-p">0</p>
+                    </div>
+                    <div class="remain" id="box3">
+                        <h3>Remaining</h3>
+                        <p id="box3-p">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
