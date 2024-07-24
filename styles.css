@@ -24,7 +24,6 @@ body {
     /* width: 100%; */
     justify-content: center;
     margin-top: 4rem;
-    /* align-items: start; */
 }
 
 h1 {
@@ -82,7 +81,7 @@ h1 {
 
 .expense-list {
     /* width: 80%; */
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: grid;
 }
 
@@ -125,8 +124,16 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    justify-content: center;
     /* align-self: start; */
     /* margin-top: 3.6rem; */
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .head {
@@ -134,15 +141,13 @@ h1 {
     grid-template-columns: 150px 80px 200px;
     /* gap: 0px; */
     justify-content: center;
-}
-
-.head {
     background: transparent;
     border-bottom: 1px solid white;
     outline: 0;
     padding: 5px 0;
     font: 18px;
     font-weight: 700;
+    align-items: center;
 }
 
 .amount {
@@ -181,6 +186,10 @@ h1 {
    border-bottom: 3px solid rgb(187, 15, 15);
 }
 
+@media (max-width: 540px) {
+    
+}
+
 @media (max-width: 768px) {
     .outer-container {
         display: flex;
@@ -191,13 +200,27 @@ h1 {
 
     .inner-container {
         flex-direction: column;
-        width: 50%;
+        width: 100%;
         height: 90%;
         margin-bottom: 3rem;
+        padding: 0 1rem;
+    }
+
+    .input-container {
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+
+    .input-container button {
+        width: 400px;
     }
 
     .input-container input {
-        width: 100%;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     
     .expense-item {
@@ -207,12 +230,51 @@ h1 {
         padding: 10px;
         border-bottom: 1px solid #ddd;
         align-items: center;
-        margin-left: -2rem;
+        /* margin-left: -1rem; */
     }
     
     .expense-details {
         display: grid;
         grid-template-columns: 150px 80px;
         justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .outer-container h1 {
+        font-size: 2rem;
+    }
+    .input-container input {
+        width: 310px;
+    }
+
+    .input-container button {
+        width: 310px;
+    }
+
+    .head {
+        display: grid;
+        grid-template-columns: 120px 80px 160px;
+        font-size: 15px;
+        /* margin-left: 1rem; */
+    }
+
+    .expense-item {
+        display: grid;
+        grid-template-columns: 200px 160px;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        align-items: center;
+    }
+    
+    .expense-details {
+        display: grid;
+        grid-template-columns: 120px 80px;
+        justify-content: center;
+    }
+
+    .display {
+        padding-left: 1rem;
     }
 }
